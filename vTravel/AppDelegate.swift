@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.setApplicationId("5an0c4Tm8A8GcfQp7bYoFRLYeVqZGDFjclWdYoZF",
             clientKey: "Zcm8DJmQRFZzFaJMjoywIJvN5JJyfdMFB3Q8gQjl")
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
-        
+          //mmmmmmmmmm
         
 //        var gameScore = PFObject(className:"GameScore")
 //        gameScore["score"] = 1337
