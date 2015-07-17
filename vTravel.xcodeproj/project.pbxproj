@@ -29,6 +29,7 @@
 		89E471B71B592D6200F9DA27 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89E471B61B592D6200F9DA27 /* SystemConfiguration.framework */; };
 		89E471B91B592D6900F9DA27 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 89E471B81B592D6900F9DA27 /* libz.dylib */; };
 		89E471BB1B592D7300F9DA27 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 89E471BA1B592D7300F9DA27 /* libsqlite3.dylib */; };
+		89E471BF1B59357000F9DA27 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E471BE1B59357000F9DA27 /* LoginVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		89E471B61B592D6200F9DA27 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		89E471B81B592D6900F9DA27 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		89E471BA1B592D7300F9DA27 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		89E471BE1B59357000F9DA27 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 			children = (
 				89E471BC1B592D8E00F9DA27 /* FrameWorks */,
 				89E4719B1B592CFB00F9DA27 /* ThirdPartyLib */,
+				89E471BD1B59355600F9DA27 /* ViewControllers */,
 				89E4717A1B59278F00F9DA27 /* AppDelegate.swift */,
 				89E4717C1B59278F00F9DA27 /* ViewController.swift */,
 				89E4717E1B59278F00F9DA27 /* Main.storyboard */,
@@ -190,6 +193,14 @@
 				89E471A81B592D3300F9DA27 /* AudioToolbox.framework */,
 			);
 			name = FrameWorks;
+			sourceTree = "<group>";
+		};
+		89E471BD1B59355600F9DA27 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				89E471BE1B59357000F9DA27 /* LoginVC.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,6 +305,7 @@
 			files = (
 				89E4717D1B59278F00F9DA27 /* ViewController.swift in Sources */,
 				89E4717B1B59278F00F9DA27 /* AppDelegate.swift in Sources */,
+				89E471BF1B59357000F9DA27 /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
