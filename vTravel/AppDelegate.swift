@@ -46,15 +46,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            }
 //        }
         
-//        var query = PFQuery(className:"GameScore")
-//        query.getObjectInBackgroundWithId("VkiLrMRymo") {
-//            (gameScore: PFObject?, error: NSError?) -> Void in
-//            if error == nil && gameScore != nil {
-//                println(gameScore)
-//            } else {
-//                println(error)
-//            }
-//        }
+        var query = PFQuery(className:"GameScore")
+        query.getObjectInBackgroundWithId("VkiLrMRymo") {
+            (gameScore: PFObject?, error: NSError?) -> Void in
+            if error == nil && gameScore != nil {
+                println(gameScore)
+            } else {
+                println(error)
+            }
+        }
     }
     
     func applicationWillResignActive(application: UIApplication) {
