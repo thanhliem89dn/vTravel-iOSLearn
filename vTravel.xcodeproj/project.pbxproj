@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44BDD59F1B67630300CCB042 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BDD59E1B67630300CCB042 /* HomeViewController.swift */; };
+		44BDD5A41B67638000CCB042 /* HanhTrinhCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BDD5A21B67638000CCB042 /* HanhTrinhCell.swift */; };
+		44BDD5A51B67638000CCB042 /* HanhTrinhCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44BDD5A31B67638000CCB042 /* HanhTrinhCell.xib */; };
+		44BDD5A81B67692900CCB042 /* ava.png in Resources */ = {isa = PBXBuildFile; fileRef = 44BDD5A71B67692900CCB042 /* ava.png */; };
+		44BDD5AA1B6776F300CCB042 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BDD5A91B6776F300CCB042 /* ContainerViewController.swift */; };
+		44BDD5AC1B67784600CCB042 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BDD5AB1B67784600CCB042 /* UserViewController.swift */; };
+		44BDD5AF1B67813B00CCB042 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BDD5AD1B67813A00CCB042 /* UserCell.swift */; };
+		44BDD5B01B67813B00CCB042 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44BDD5AE1B67813A00CCB042 /* UserCell.xib */; };
+		44BDD5B21B6781DE00CCB042 /* avatar.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 44BDD5B11B6781DE00CCB042 /* avatar.jpeg */; };
+		44BDD5B51B6783BB00CCB042 /* HanhTrinhUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BDD5B31B6783BB00CCB042 /* HanhTrinhUserCell.swift */; };
+		44BDD5B61B6783BB00CCB042 /* HanhTrinhUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44BDD5B41B6783BB00CCB042 /* HanhTrinhUserCell.xib */; };
+		44BDD5B91B678CB000CCB042 /* DiadiemUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BDD5B71B678CB000CCB042 /* DiadiemUserCell.swift */; };
+		44BDD5BA1B678CB000CCB042 /* DiadiemUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44BDD5B81B678CB000CCB042 /* DiadiemUserCell.xib */; };
 		89E4717B1B59278F00F9DA27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E4717A1B59278F00F9DA27 /* AppDelegate.swift */; };
 		89E4717D1B59278F00F9DA27 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E4717C1B59278F00F9DA27 /* ViewController.swift */; };
 		89E471801B59278F00F9DA27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89E4717E1B59278F00F9DA27 /* Main.storyboard */; };
@@ -43,6 +56,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		44BDD59E1B67630300CCB042 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		44BDD5A21B67638000CCB042 /* HanhTrinhCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HanhTrinhCell.swift; sourceTree = "<group>"; };
+		44BDD5A31B67638000CCB042 /* HanhTrinhCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HanhTrinhCell.xib; sourceTree = "<group>"; };
+		44BDD5A71B67692900CCB042 /* ava.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ava.png; sourceTree = "<group>"; };
+		44BDD5A91B6776F300CCB042 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		44BDD5AB1B67784600CCB042 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		44BDD5AD1B67813A00CCB042 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		44BDD5AE1B67813A00CCB042 /* UserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
+		44BDD5B11B6781DE00CCB042 /* avatar.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = avatar.jpeg; sourceTree = "<group>"; };
+		44BDD5B31B6783BB00CCB042 /* HanhTrinhUserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HanhTrinhUserCell.swift; sourceTree = "<group>"; };
+		44BDD5B41B6783BB00CCB042 /* HanhTrinhUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HanhTrinhUserCell.xib; sourceTree = "<group>"; };
+		44BDD5B71B678CB000CCB042 /* DiadiemUserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiadiemUserCell.swift; sourceTree = "<group>"; };
+		44BDD5B81B678CB000CCB042 /* DiadiemUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiadiemUserCell.xib; sourceTree = "<group>"; };
 		89E471751B59278F00F9DA27 /* vTravel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vTravel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89E471791B59278F00F9DA27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89E4717A1B59278F00F9DA27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +132,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44BDD5A11B67635E00CCB042 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				44BDD5A21B67638000CCB042 /* HanhTrinhCell.swift */,
+				44BDD5A31B67638000CCB042 /* HanhTrinhCell.xib */,
+				44BDD5AD1B67813A00CCB042 /* UserCell.swift */,
+				44BDD5AE1B67813A00CCB042 /* UserCell.xib */,
+				44BDD5B31B6783BB00CCB042 /* HanhTrinhUserCell.swift */,
+				44BDD5B41B6783BB00CCB042 /* HanhTrinhUserCell.xib */,
+				44BDD5B71B678CB000CCB042 /* DiadiemUserCell.swift */,
+				44BDD5B81B678CB000CCB042 /* DiadiemUserCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		44BDD5A61B67691C00CCB042 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				44BDD5B11B6781DE00CCB042 /* avatar.jpeg */,
+				44BDD5A71B67692900CCB042 /* ava.png */,
+			);
+			name = Image;
+			sourceTree = "<group>";
+		};
 		89E4716C1B59278F00F9DA27 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +177,7 @@
 		89E471771B59278F00F9DA27 /* vTravel */ = {
 			isa = PBXGroup;
 			children = (
+				44BDD5A11B67635E00CCB042 /* Cell */,
 				89E471BC1B592D8E00F9DA27 /* FrameWorks */,
 				89E4719B1B592CFB00F9DA27 /* ThirdPartyLib */,
 				89E471BD1B59355600F9DA27 /* ViewControllers */,
@@ -143,6 +194,7 @@
 		89E471781B59278F00F9DA27 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				44BDD5A61B67691C00CCB042 /* Image */,
 				89E471791B59278F00F9DA27 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -199,6 +251,9 @@
 			isa = PBXGroup;
 			children = (
 				89E471BE1B59357000F9DA27 /* LoginVC.swift */,
+				44BDD59E1B67630300CCB042 /* HomeViewController.swift */,
+				44BDD5A91B6776F300CCB042 /* ContainerViewController.swift */,
+				44BDD5AB1B67784600CCB042 /* UserViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -283,8 +338,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44BDD5A81B67692900CCB042 /* ava.png in Resources */,
+				44BDD5B61B6783BB00CCB042 /* HanhTrinhUserCell.xib in Resources */,
+				44BDD5B21B6781DE00CCB042 /* avatar.jpeg in Resources */,
 				89E471801B59278F00F9DA27 /* Main.storyboard in Resources */,
+				44BDD5BA1B678CB000CCB042 /* DiadiemUserCell.xib in Resources */,
+				44BDD5B01B67813B00CCB042 /* UserCell.xib in Resources */,
 				89E471851B59278F00F9DA27 /* LaunchScreen.xib in Resources */,
+				44BDD5A51B67638000CCB042 /* HanhTrinhCell.xib in Resources */,
 				89E471821B59278F00F9DA27 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,9 +364,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44BDD5AF1B67813B00CCB042 /* UserCell.swift in Sources */,
+				44BDD5AC1B67784600CCB042 /* UserViewController.swift in Sources */,
+				44BDD5A41B67638000CCB042 /* HanhTrinhCell.swift in Sources */,
 				89E4717D1B59278F00F9DA27 /* ViewController.swift in Sources */,
+				44BDD5B91B678CB000CCB042 /* DiadiemUserCell.swift in Sources */,
 				89E4717B1B59278F00F9DA27 /* AppDelegate.swift in Sources */,
 				89E471BF1B59357000F9DA27 /* LoginVC.swift in Sources */,
+				44BDD5AA1B6776F300CCB042 /* ContainerViewController.swift in Sources */,
+				44BDD59F1B67630300CCB042 /* HomeViewController.swift in Sources */,
+				44BDD5B51B6783BB00CCB042 /* HanhTrinhUserCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
