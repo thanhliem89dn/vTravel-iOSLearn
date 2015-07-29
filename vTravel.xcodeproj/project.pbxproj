@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44912C1F1B686AF900E19B88 /* landscaping.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 44912C1E1B686AF900E19B88 /* landscaping.jpeg */; };
+		44912C211B686E5400E19B88 /* ShowPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44912C201B686E5400E19B88 /* ShowPhotoViewController.swift */; };
+		44912C231B687DFF00E19B88 /* HanhTrinhDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44912C221B687DFF00E19B88 /* HanhTrinhDetailViewController.swift */; };
 		44BDD59F1B67630300CCB042 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BDD59E1B67630300CCB042 /* HomeViewController.swift */; };
 		44BDD5A41B67638000CCB042 /* HanhTrinhCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BDD5A21B67638000CCB042 /* HanhTrinhCell.swift */; };
 		44BDD5A51B67638000CCB042 /* HanhTrinhCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44BDD5A31B67638000CCB042 /* HanhTrinhCell.xib */; };
@@ -56,6 +59,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		44912C1E1B686AF900E19B88 /* landscaping.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = landscaping.jpeg; sourceTree = "<group>"; };
+		44912C201B686E5400E19B88 /* ShowPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowPhotoViewController.swift; sourceTree = "<group>"; };
+		44912C221B687DFF00E19B88 /* HanhTrinhDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HanhTrinhDetailViewController.swift; sourceTree = "<group>"; };
 		44BDD59E1B67630300CCB042 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		44BDD5A21B67638000CCB042 /* HanhTrinhCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HanhTrinhCell.swift; sourceTree = "<group>"; };
 		44BDD5A31B67638000CCB042 /* HanhTrinhCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HanhTrinhCell.xib; sourceTree = "<group>"; };
@@ -150,6 +156,7 @@
 		44BDD5A61B67691C00CCB042 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				44912C1E1B686AF900E19B88 /* landscaping.jpeg */,
 				44BDD5B11B6781DE00CCB042 /* avatar.jpeg */,
 				44BDD5A71B67692900CCB042 /* ava.png */,
 			);
@@ -254,6 +261,8 @@
 				44BDD59E1B67630300CCB042 /* HomeViewController.swift */,
 				44BDD5A91B6776F300CCB042 /* ContainerViewController.swift */,
 				44BDD5AB1B67784600CCB042 /* UserViewController.swift */,
+				44912C201B686E5400E19B88 /* ShowPhotoViewController.swift */,
+				44912C221B687DFF00E19B88 /* HanhTrinhDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -346,6 +355,7 @@
 				44BDD5B01B67813B00CCB042 /* UserCell.xib in Resources */,
 				89E471851B59278F00F9DA27 /* LaunchScreen.xib in Resources */,
 				44BDD5A51B67638000CCB042 /* HanhTrinhCell.xib in Resources */,
+				44912C1F1B686AF900E19B88 /* landscaping.jpeg in Resources */,
 				89E471821B59278F00F9DA27 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,10 +378,12 @@
 				44BDD5AC1B67784600CCB042 /* UserViewController.swift in Sources */,
 				44BDD5A41B67638000CCB042 /* HanhTrinhCell.swift in Sources */,
 				89E4717D1B59278F00F9DA27 /* ViewController.swift in Sources */,
+				44912C231B687DFF00E19B88 /* HanhTrinhDetailViewController.swift in Sources */,
 				44BDD5B91B678CB000CCB042 /* DiadiemUserCell.swift in Sources */,
 				89E4717B1B59278F00F9DA27 /* AppDelegate.swift in Sources */,
 				89E471BF1B59357000F9DA27 /* LoginVC.swift in Sources */,
 				44BDD5AA1B6776F300CCB042 /* ContainerViewController.swift in Sources */,
+				44912C211B686E5400E19B88 /* ShowPhotoViewController.swift in Sources */,
 				44BDD59F1B67630300CCB042 /* HomeViewController.swift in Sources */,
 				44BDD5B51B6783BB00CCB042 /* HanhTrinhUserCell.swift in Sources */,
 			);

@@ -42,6 +42,11 @@ class HomeViewController: UIViewController,UITableViewDataSource,UITableViewDele
         return 201
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        var vc = self.storyboard?.instantiateViewControllerWithIdentifier("HanhTrinhDetailViewController") as! HanhTrinhDetailViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 
     /*
     // MARK: - Navigation

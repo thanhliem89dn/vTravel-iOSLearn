@@ -1,41 +1,30 @@
 //
-//  UserViewController.swift
+//  HanhTrinhDetailViewController.swift
 //  vTravel
 //
-//  Created by SOFTLIGHT on 7/28/15.
+//  Created by SOFTLIGHT on 7/29/15.
 //  Copyright (c) 2015 iviettech. All rights reserved.
 //
 
 import UIKit
-@objc protocol ContainerViewDelegate{
-    optional func didPressButton()
-}
 
-class UserViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+class HanhTrinhDetailViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
-    
-    @IBOutlet weak var segment: UISegmentedControl!
-    var isSwitch  = false
-    let hanhtrinhCell = "HanhTrinhUserCell"
+    let homeCell = "HanhTrinhCell"
     let diadiemCell = "DiadiemUserCell"
-    var delegate: ContainerViewDelegate?
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.navigationController?.navigationBar.hidden = false
-        var cellNib = UINib(nibName: hanhtrinhCell, bundle: nil)
-        tableView.registerNib(cellNib, forCellReuseIdentifier: hanhtrinhCell)
+        tableView.delegate = self
+        tableView.dataSource = self
+        var cellNib = UINib(nibName: homeCell, bundle: nil)
+        tableView.registerNib(cellNib, forCellReuseIdentifier: homeCell)
         var cellNib2 = UINib(nibName: diadiemCell, bundle: nil)
         tableView.registerNib(cellNib2, forCellReuseIdentifier: diadiemCell)
-        self.navigationItem.setHidesBackButton(true, animated:true);
+        self.title = "Chuyen di ABC"
         tableView.showsVerticalScrollIndicator = false
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -43,7 +32,11 @@ class UserViewController: UIViewController,UITableViewDataSource,UITableViewDele
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        if(isSwitch){
+        if(indexPath.row == 0){
+            let cell = tableView.dequeueReusableCellWithIdentifier(homeCell, forIndexPath: indexPath) as! HanhTrinhCell
+            cell.selectionStyle = UITableViewCellSelectionStyle.None;
+            return cell
+        }else{
             let ddiemCell = tableView.dequeueReusableCellWithIdentifier(diadiemCell, forIndexPath: indexPath) as! DiadiemUserCell
             var tapped1 = UITapGestureRecognizer(target: self, action: "showPhoto")
             var tapped2 = UITapGestureRecognizer(target: self, action: "showPhoto")
@@ -56,43 +49,27 @@ class UserViewController: UIViewController,UITableViewDataSource,UITableViewDele
             ddiemCell.photo3.addGestureRecognizer(tapped3)
             ddiemCell.selectionStyle = UITableViewCellSelectionStyle.None;
             return ddiemCell
-        }else{
-            let cell = tableView.dequeueReusableCellWithIdentifier(hanhtrinhCell, forIndexPath: indexPath) as! HanhTrinhUserCell
-            cell.selectionStyle = UITableViewCellSelectionStyle.None;
-            return cell
         }
     }
-    
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        if(isSwitch){
-            return 161
+        if(indexPath.row == 0){
+            return 201
         }else{
-            return 111
-        }
-    }
-    
-
-    @IBAction func switchTable(sender: AnyObject) {
-        switch(sender.selectedSegmentIndex){
-            case 0:
-                isSwitch = false
-                tableView.reloadData()
-                break
-            case 1:
-                isSwitch = true
-                tableView.reloadData()
-                break
-            default:
-                break
+            return 161
         }
     }
     
     func showPhoto(){
-        if let delegate  = self.delegate {
-            delegate.didPressButton!()
-        }
-        
+        var vc = self.storyboard?.instantiateViewControllerWithIdentifier("ShowPhotoViewController") as! UIViewController
+        self.navigationController?.pushViewController(vc, animated: true)
     }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+
     /*
     // MARK: - Navigation
 

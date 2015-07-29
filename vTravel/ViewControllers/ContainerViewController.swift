@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ContainerViewController: UIViewController {
+class ContainerViewController: UIViewController,ContainerViewDelegate {
 
     @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var containerView: UIView!
@@ -18,6 +18,7 @@ class ContainerViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         self.navigationItem.setHidesBackButton(true, animated:true);
+        self.navigationController?.navigationBar.hidden = false
         var vc = self.viewControllerForSegmentIndex(self.segmentControl.selectedSegmentIndex)
         self.addChildViewController(vc)
         vc.view.frame = self.containerView.bounds
@@ -51,6 +52,10 @@ class ContainerViewController: UIViewController {
                 break
             case 1:
                 vc = self.storyboard?.instantiateViewControllerWithIdentifier("UserViewController") as! UIViewController
+                if let viewcontroller = vc as? UserViewController
+                {
+                    viewcontroller.delegate = self
+                }
                 break
             default:
                 break
@@ -61,7 +66,15 @@ class ContainerViewController: UIViewController {
     
     @IBAction func themHanhTrinh(sender: AnyObject) {
     }
-    @IBOutlet weak var themDiaDiem: UIButton!
+    
+    
+    @IBAction func themDiaDiem(sender: AnyObject) {
+    }
+    
+    func didPressButton(){
+        var vc = self.storyboard?.instantiateViewControllerWithIdentifier("ShowPhotoViewController") as! UIViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 
     /*
     // MARK: - Navigation
