@@ -12,7 +12,9 @@ class HanhTrinhDetailViewController: UIViewController,UITableViewDelegate,UITabl
 
     @IBOutlet weak var tableView: UITableView!
     let homeCell = "HanhTrinhCell"
+    let userCell = "HanhTrinhUserDetailCell"
     let diadiemCell = "DiadiemUserCell"
+    var isHome = true
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,6 +25,8 @@ class HanhTrinhDetailViewController: UIViewController,UITableViewDelegate,UITabl
         tableView.registerNib(cellNib, forCellReuseIdentifier: homeCell)
         var cellNib2 = UINib(nibName: diadiemCell, bundle: nil)
         tableView.registerNib(cellNib2, forCellReuseIdentifier: diadiemCell)
+        var cellNib3 = UINib(nibName: userCell, bundle: nil)
+        tableView.registerNib(cellNib3, forCellReuseIdentifier: userCell)
         self.title = "Chuyen di ABC"
         tableView.showsVerticalScrollIndicator = false
     }
@@ -33,9 +37,16 @@ class HanhTrinhDetailViewController: UIViewController,UITableViewDelegate,UITabl
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if(indexPath.row == 0){
-            let cell = tableView.dequeueReusableCellWithIdentifier(homeCell, forIndexPath: indexPath) as! HanhTrinhCell
-            cell.selectionStyle = UITableViewCellSelectionStyle.None;
-            return cell
+            if(isHome){
+                let cell = tableView.dequeueReusableCellWithIdentifier(homeCell, forIndexPath: indexPath) as! HanhTrinhCell
+                cell.selectionStyle = UITableViewCellSelectionStyle.None;
+                return cell
+            }else{
+                let cell = tableView.dequeueReusableCellWithIdentifier(userCell, forIndexPath: indexPath) as! HanhTrinhUserDetailCell
+                cell.selectionStyle = UITableViewCellSelectionStyle.None;
+                return cell
+            }
+            
         }else{
             let ddiemCell = tableView.dequeueReusableCellWithIdentifier(diadiemCell, forIndexPath: indexPath) as! DiadiemUserCell
             var tapped1 = UITapGestureRecognizer(target: self, action: "showPhoto")
@@ -53,9 +64,22 @@ class HanhTrinhDetailViewController: UIViewController,UITableViewDelegate,UITabl
     }
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if(indexPath.row == 0){
-            return 201
+            if(isHome){
+                return 201
+            }else{
+                return 171
+            }
         }else{
             return 161
+        }
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if(indexPath.row != 0){
+            var vc : DiadiemDetailViewController!
+            vc = self.storyboard?.instantiateViewControllerWithIdentifier("DiadiemDetailViewController") as! DiadiemDetailViewController
+            vc.isHome = isHome
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     

@@ -43,7 +43,9 @@ class HomeViewController: UIViewController,UITableViewDataSource,UITableViewDele
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        var vc = self.storyboard?.instantiateViewControllerWithIdentifier("HanhTrinhDetailViewController") as! HanhTrinhDetailViewController
+        var vc : HanhTrinhDetailViewController!
+        vc = self.storyboard?.instantiateViewControllerWithIdentifier("HanhTrinhDetailViewController") as! HanhTrinhDetailViewController
+        vc.isHome = true
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

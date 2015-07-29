@@ -71,6 +71,20 @@ class UserViewController: UIViewController,UITableViewDataSource,UITableViewDele
         }
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if(isSwitch){
+            var vc : DiadiemDetailViewController!
+            vc = self.storyboard?.instantiateViewControllerWithIdentifier("DiadiemDetailViewController") as! DiadiemDetailViewController
+            vc.isHome = false
+            self.navigationController?.pushViewController(vc, animated: true)
+        }else{
+            var vc : HanhTrinhDetailViewController!
+            vc = self.storyboard?.instantiateViewControllerWithIdentifier("HanhTrinhDetailViewController") as! HanhTrinhDetailViewController
+            vc.isHome = false
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
 
     @IBAction func switchTable(sender: AnyObject) {
         switch(sender.selectedSegmentIndex){

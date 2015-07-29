@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="81" id="KGk-i7-Jjw" customClass="ReviewCell" customModule="vTravel" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="81"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bXh-d8-Cc5">
+                        <rect key="frame" x="10" y="0.0" width="1" height="70"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="1" id="kXq-oH-YHh"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fH6-Dr-BON">
+                        <rect key="frame" x="10" y="0.0" width="300" height="1"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="zGE-Rx-Tbf"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g58-7u-H3z">
+                        <rect key="frame" x="10" y="69" width="300" height="1"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="ZcU-ru-Ksc"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bwi-NR-znw">
+                        <rect key="frame" x="310" y="0.0" width="1" height="70"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="1" id="KFW-iC-xqh"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nơi này rất thú vị. Qúan ăn rất ngon !!!!!!!!!!!!!!!!!!!!" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJD-go-EpP">
+                        <rect key="frame" x="20" y="1" width="280" height="67"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="fH6-Dr-BON" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="1kP-0a-hlF"/>
+                    <constraint firstItem="g58-7u-H3z" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="4MO-sx-hyv"/>
+                    <constraint firstAttribute="trailing" secondItem="fH6-Dr-BON" secondAttribute="trailing" constant="10" id="5A2-Tp-wVL"/>
+                    <constraint firstItem="fH6-Dr-BON" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="8J1-do-jU0"/>
+                    <constraint firstAttribute="bottom" secondItem="g58-7u-H3z" secondAttribute="bottom" constant="10" id="TKV-FS-bX8"/>
+                    <constraint firstItem="Bwi-NR-znw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="VBb-zC-TVP"/>
+                    <constraint firstAttribute="bottom" secondItem="Bwi-NR-znw" secondAttribute="bottom" constant="10" id="WpB-NX-utK"/>
+                    <constraint firstItem="bXh-d8-Cc5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="bYf-XE-gz0"/>
+                    <constraint firstAttribute="bottom" secondItem="bXh-d8-Cc5" secondAttribute="bottom" constant="10" id="f75-dj-r17"/>
+                    <constraint firstAttribute="trailing" secondItem="Bwi-NR-znw" secondAttribute="trailing" constant="9" id="nNs-P0-hqI"/>
+                    <constraint firstItem="bXh-d8-Cc5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="s1r-9E-z5O"/>
+                    <constraint firstAttribute="trailing" secondItem="g58-7u-H3z" secondAttribute="trailing" constant="10" id="tKB-ve-bIY"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="lblReview" destination="AJD-go-EpP" id="EVL-be-aGr"/>
+            </connections>
+            <point key="canvasLocation" x="300" y="178.5"/>
+        </tableViewCell>
+    </objects>
+</document>

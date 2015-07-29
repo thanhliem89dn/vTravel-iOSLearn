@@ -162,6 +162,39 @@
             </objects>
             <point key="canvasLocation" x="1372" y="283"/>
         </scene>
+        <!--Diadiem Detail View Controller-->
+        <scene sceneID="ucC-je-DFK">
+            <objects>
+                <viewController storyboardIdentifier="DiadiemDetailViewController" id="oer-7H-C80" customClass="DiadiemDetailViewController" customModule="vTravel" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="spo-tu-jc5"/>
+                        <viewControllerLayoutGuide type="bottom" id="nhG-pn-dba"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rCK-ps-efX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="WF4-Rh-OiZ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nhG-pn-dba" firstAttribute="top" secondItem="WF4-Rh-OiZ" secondAttribute="bottom" id="3wl-Tb-VqT"/>
+                            <constraint firstItem="WF4-Rh-OiZ" firstAttribute="top" secondItem="rCK-ps-efX" secondAttribute="top" id="8XJ-cz-4yT"/>
+                            <constraint firstItem="WF4-Rh-OiZ" firstAttribute="leading" secondItem="rCK-ps-efX" secondAttribute="leading" id="SGY-6h-OSI"/>
+                            <constraint firstAttribute="trailing" secondItem="WF4-Rh-OiZ" secondAttribute="trailing" id="gzw-cX-DWU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="WF4-Rh-OiZ" id="KSO-vt-iht"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vIS-fE-OaJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="212" y="947"/>
+        </scene>
         <!--Hanh Trinh Detail View Controller-->
         <scene sceneID="PW1-fG-VsW">
             <objects>
