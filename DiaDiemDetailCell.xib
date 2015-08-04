@@ -116,7 +116,7 @@
             <connections>
                 <outlet property="lblReview" destination="5Vu-DR-rJv" id="bg1-yL-wqL"/>
             </connections>
-            <point key="canvasLocation" x="192" y="213"/>
+            <point key="canvasLocation" x="441" y="129"/>
         </tableViewCell>
     </objects>
 </document>

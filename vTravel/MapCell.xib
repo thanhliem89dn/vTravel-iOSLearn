@@ -14,14 +14,14 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="4hV-ae-sLY">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="210"/>
                     </mapView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="4hV-ae-sLY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="0ch-bV-9ux"/>
                     <constraint firstAttribute="trailing" secondItem="4hV-ae-sLY" secondAttribute="trailing" id="Nk7-Ys-dCR"/>
                     <constraint firstItem="4hV-ae-sLY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="TRG-Ag-awm"/>
-                    <constraint firstAttribute="bottom" secondItem="4hV-ae-sLY" secondAttribute="bottom" constant="10" id="cM5-LI-3kL"/>
+                    <constraint firstAttribute="bottom" secondItem="4hV-ae-sLY" secondAttribute="bottom" id="bs1-Kr-w21"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

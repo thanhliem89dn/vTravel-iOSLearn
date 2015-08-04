@@ -65,10 +65,16 @@ class ContainerViewController: UIViewController,ContainerViewDelegate {
     }
     
     @IBAction func themHanhTrinh(sender: AnyObject) {
+        var vc: UIViewController
+        vc = self.storyboard?.instantiateViewControllerWithIdentifier("AddNewTrip") as! UIViewController
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     
     @IBAction func themDiaDiem(sender: AnyObject) {
+        var vc: UIViewController
+        vc = self.storyboard?.instantiateViewControllerWithIdentifier("AddNewPlace") as! UIViewController
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func didPressButton(){

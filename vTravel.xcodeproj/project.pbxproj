@@ -57,6 +57,16 @@
 		89E471B91B592D6900F9DA27 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 89E471B81B592D6900F9DA27 /* libz.dylib */; };
 		89E471BB1B592D7300F9DA27 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 89E471BA1B592D7300F9DA27 /* libsqlite3.dylib */; };
 		89E471BF1B59357000F9DA27 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E471BE1B59357000F9DA27 /* LoginVC.swift */; };
+		B088BF441B6DC2BD00834265 /* AddNewTripButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B088BF431B6DC2BD00834265 /* AddNewTripButtonCell.xib */; };
+		B088BF461B6DC35900834265 /* AddNewTripButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B088BF451B6DC35900834265 /* AddNewTripButtonCell.swift */; };
+		B08AE0541B6DFD7700FE32EA /* AddNewPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08AE0531B6DFD7700FE32EA /* AddNewPlace.swift */; };
+		B08AE0561B6DFE4E00FE32EA /* AddNewPlaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B08AE0551B6DFE4E00FE32EA /* AddNewPlaceCell.xib */; };
+		B08AE0581B6DFE6300FE32EA /* AddNewPlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08AE0571B6DFE6300FE32EA /* AddNewPlaceCell.swift */; };
+		B094C1091B6DADA700454722 /* AddNewTripCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B094C1081B6DADA700454722 /* AddNewTripCell.xib */; };
+		B094C10B1B6DAEB300454722 /* AddNewTripCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B094C10A1B6DAEB300454722 /* AddNewTripCell.swift */; };
+		B094C10D1B6DAF1900454722 /* ReviewTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B094C10C1B6DAF1900454722 /* ReviewTextCell.xib */; };
+		B094C10F1B6DAF8D00454722 /* ReviewTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B094C10E1B6DAF8D00454722 /* ReviewTextCell.swift */; };
+		B094C1111B6DB21F00454722 /* AddNewTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = B094C1101B6DB21F00454722 /* AddNewTrip.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +134,16 @@
 		89E471B81B592D6900F9DA27 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		89E471BA1B592D7300F9DA27 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		89E471BE1B59357000F9DA27 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		B088BF431B6DC2BD00834265 /* AddNewTripButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddNewTripButtonCell.xib; sourceTree = "<group>"; };
+		B088BF451B6DC35900834265 /* AddNewTripButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewTripButtonCell.swift; sourceTree = "<group>"; };
+		B08AE0531B6DFD7700FE32EA /* AddNewPlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewPlace.swift; sourceTree = "<group>"; };
+		B08AE0551B6DFE4E00FE32EA /* AddNewPlaceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddNewPlaceCell.xib; sourceTree = "<group>"; };
+		B08AE0571B6DFE6300FE32EA /* AddNewPlaceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewPlaceCell.swift; sourceTree = "<group>"; };
+		B094C1081B6DADA700454722 /* AddNewTripCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddNewTripCell.xib; sourceTree = "<group>"; };
+		B094C10A1B6DAEB300454722 /* AddNewTripCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewTripCell.swift; sourceTree = "<group>"; };
+		B094C10C1B6DAF1900454722 /* ReviewTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReviewTextCell.xib; sourceTree = "<group>"; };
+		B094C10E1B6DAF8D00454722 /* ReviewTextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewTextCell.swift; sourceTree = "<group>"; };
+		B094C1101B6DB21F00454722 /* AddNewTrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewTrip.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +201,14 @@
 				44912C371B68CD3300E19B88 /* ReviewCell.xib */,
 				44912C3A1B68DBFB00E19B88 /* HanhTrinhUserDetailCell.swift */,
 				44912C3B1B68DBFB00E19B88 /* HanhTrinhUserDetailCell.xib */,
+				B094C10A1B6DAEB300454722 /* AddNewTripCell.swift */,
+				B094C1081B6DADA700454722 /* AddNewTripCell.xib */,
+				B094C10E1B6DAF8D00454722 /* ReviewTextCell.swift */,
+				B094C10C1B6DAF1900454722 /* ReviewTextCell.xib */,
+				B088BF451B6DC35900834265 /* AddNewTripButtonCell.swift */,
+				B088BF431B6DC2BD00834265 /* AddNewTripButtonCell.xib */,
+				B08AE0571B6DFE6300FE32EA /* AddNewPlaceCell.swift */,
+				B08AE0551B6DFE4E00FE32EA /* AddNewPlaceCell.xib */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -296,6 +324,8 @@
 				44912C201B686E5400E19B88 /* ShowPhotoViewController.swift */,
 				44912C221B687DFF00E19B88 /* HanhTrinhDetailViewController.swift */,
 				44912C341B68BDBE00E19B88 /* DiadiemDetailViewController.swift */,
+				B094C1101B6DB21F00454722 /* AddNewTrip.swift */,
+				B08AE0531B6DFD7700FE32EA /* AddNewPlace.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -381,15 +411,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				44912C331B68BCBA00E19B88 /* ImageCell.xib in Resources */,
+				B08AE0561B6DFE4E00FE32EA /* AddNewPlaceCell.xib in Resources */,
+				B088BF441B6DC2BD00834265 /* AddNewTripButtonCell.xib in Resources */,
 				44BDD5A81B67692900CCB042 /* ava.png in Resources */,
 				44BDD5B61B6783BB00CCB042 /* HanhTrinhUserCell.xib in Resources */,
 				44912C2F1B68B8EB00E19B88 /* MapCell.xib in Resources */,
 				44BDD5B21B6781DE00CCB042 /* avatar.jpeg in Resources */,
+				B094C1091B6DADA700454722 /* AddNewTripCell.xib in Resources */,
 				89E471801B59278F00F9DA27 /* Main.storyboard in Resources */,
 				44BDD5BA1B678CB000CCB042 /* DiadiemUserCell.xib in Resources */,
 				44912C2B1B68B53D00E19B88 /* DiaDiemDetailCell.xib in Resources */,
 				44912C3D1B68DBFB00E19B88 /* HanhTrinhUserDetailCell.xib in Resources */,
 				44BDD5B01B67813B00CCB042 /* UserCell.xib in Resources */,
+				B094C10D1B6DAF1900454722 /* ReviewTextCell.xib in Resources */,
 				44912C391B68CD3300E19B88 /* ReviewCell.xib in Resources */,
 				89E471851B59278F00F9DA27 /* LaunchScreen.xib in Resources */,
 				44BDD5A51B67638000CCB042 /* HanhTrinhCell.xib in Resources */,
@@ -412,14 +446,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B08AE0581B6DFE6300FE32EA /* AddNewPlaceCell.swift in Sources */,
 				44BDD5AF1B67813B00CCB042 /* UserCell.swift in Sources */,
 				44912C351B68BDBE00E19B88 /* DiadiemDetailViewController.swift in Sources */,
 				44BDD5AC1B67784600CCB042 /* UserViewController.swift in Sources */,
+				B088BF461B6DC35900834265 /* AddNewTripButtonCell.swift in Sources */,
 				44BDD5A41B67638000CCB042 /* HanhTrinhCell.swift in Sources */,
 				89E4717D1B59278F00F9DA27 /* ViewController.swift in Sources */,
 				44912C231B687DFF00E19B88 /* HanhTrinhDetailViewController.swift in Sources */,
 				44912C381B68CD3300E19B88 /* ReviewCell.swift in Sources */,
 				44BDD5B91B678CB000CCB042 /* DiadiemUserCell.swift in Sources */,
+				B08AE0541B6DFD7700FE32EA /* AddNewPlace.swift in Sources */,
+				B094C1111B6DB21F00454722 /* AddNewTrip.swift in Sources */,
 				44912C2A1B68B53D00E19B88 /* DiaDiemDetailCell.swift in Sources */,
 				89E4717B1B59278F00F9DA27 /* AppDelegate.swift in Sources */,
 				89E471BF1B59357000F9DA27 /* LoginVC.swift in Sources */,
@@ -428,7 +466,9 @@
 				44BDD59F1B67630300CCB042 /* HomeViewController.swift in Sources */,
 				44912C3C1B68DBFB00E19B88 /* HanhTrinhUserDetailCell.swift in Sources */,
 				44912C2E1B68B8EB00E19B88 /* MapCell.swift in Sources */,
+				B094C10F1B6DAF8D00454722 /* ReviewTextCell.swift in Sources */,
 				44BDD5B51B6783BB00CCB042 /* HanhTrinhUserCell.swift in Sources */,
+				B094C10B1B6DAEB300454722 /* AddNewTripCell.swift in Sources */,
 				44912C321B68BCBA00E19B88 /* ImageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
