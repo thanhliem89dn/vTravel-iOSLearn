@@ -39,7 +39,7 @@
             <connections>
                 <outlet property="txtReview" destination="fkX-gV-aMX" id="NED-Gn-uzq"/>
             </connections>
-            <point key="canvasLocation" x="1008" y="411"/>
+            <point key="canvasLocation" x="580" y="220"/>
         </tableViewCell>
     </objects>
 </document>
