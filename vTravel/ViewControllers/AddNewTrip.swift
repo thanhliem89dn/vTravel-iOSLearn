@@ -8,33 +8,28 @@
 
 import UIKit
 
-class AddNewTrip: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class AddNewTrip: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
     let addNewTripCell = "AddNewTripCell"
     let reviewTextCell = "ReviewTextCell"
     let mapCell = "MapCell"
-    let buttonCell = "AddNewTripButtonCell"
+    
+    var datePickerVisible = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "Add New Trip"
+        
         var cellNib = UINib(nibName: addNewTripCell, bundle: nil)
         tableView.registerNib(cellNib, forCellReuseIdentifier: addNewTripCell)
         
-        var cellNib2 = UINib(nibName: reviewTextCell, bundle: nil)
-        tableView.registerNib(cellNib2, forCellReuseIdentifier: reviewTextCell)
+        var cellNib2 = UINib(nibName: mapCell, bundle: nil)
+        tableView.registerNib(cellNib2, forCellReuseIdentifier: mapCell)
         
-        var cellNib3 = UINib(nibName: mapCell, bundle: nil)
-        tableView.registerNib(cellNib3, forCellReuseIdentifier: mapCell)
-        
-        var cellNib4 = UINib(nibName: buttonCell, bundle: nil)
-        tableView.registerNib(cellNib4, forCellReuseIdentifier: buttonCell)
-        
-        self.title = "Add New Trip"
-        
-        //self.addFooter()
+        self.addFooter()
 
         // Do any additional setup after loading the view.
     }
@@ -45,24 +40,32 @@ class AddNewTrip: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 2
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCellWithIdentifier(addNewTripCell, forIndexPath: indexPath) as! AddNewTripCell
             cell.selectionStyle = UITableViewCellSelectionStyle.None;
+            let userDefault = NSUserDefaults.standardUserDefaults()
+            if let data: AnyObject = userDefault.objectForKey("imgAvatar"){
+                cell.imgAvatar.image = UIImage(data: data as! NSData)
+            }
+            cell.txtNameTrip.delegate = self
+            cell.txtNameTrip.tag = 1
+            
+            cell.txtFromDate.delegate = self
+            cell.txtFromDate.tag = 2
+            
+            cell.txtToDate.delegate = self
+            cell.txtToDate.tag = 3
+            
+            cell.txtDetailTrip.delegate = self
+            cell.txtDetailTrip.tag = 4
+            
             return cell
-        }else if indexPath.row == 1 {
-            let cell = tableView.dequeueReusableCellWithIdentifier(reviewTextCell, forIndexPath: indexPath) as! ReviewTextCell
-            cell.selectionStyle = UITableViewCellSelectionStyle.None;
-            return cell
-        }else if indexPath.row == 2{
+        }else{
             let cell = tableView.dequeueReusableCellWithIdentifier(mapCell, forIndexPath: indexPath) as! MapCell
-            cell.selectionStyle = UITableViewCellSelectionStyle.None;
-            return cell
-        }else {
-            let cell = tableView.dequeueReusableCellWithIdentifier(buttonCell, forIndexPath: indexPath) as! AddNewTripButtonCell
             cell.selectionStyle = UITableViewCellSelectionStyle.None;
             return cell
         }
@@ -70,48 +73,78 @@ class AddNewTrip: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if(indexPath.row == 0){
-            return 110
-        }else if(indexPath.row == 1){
-            return 110
-        }else if indexPath.row == 2{
-            return 211
+            return 210
         }else{
-            return 70
+            return 211
         }
     }
     
-//    func addFooter(){
-//        var footerView = UIView(frame: CGRectMake(0, 0, 320, 50))
-//        var btnAddPlace = UIButton(frame: CGRectMake(20 , 30, 70, 30))
-//        btnAddPlace.setTitle("AddPlace", forState: .Normal)
-//        btnAddPlace.backgroundColor = UIColor.blueColor()
-//        btnAddPlace.titleLabel?.font = UIFont.systemFontOfSize(13)
-//        btnAddPlace.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-//        btnAddPlace.clipsToBounds = true
-//        btnAddPlace.layer.cornerRadius = 10
-//        footerView.addSubview(btnAddPlace)
-//        
-//        var btnSave = UIButton(frame: CGRectMake(125 , 30, 70, 30))
-//        btnSave.setTitle("Save", forState: .Normal)
-//        btnSave.backgroundColor = UIColor.blueColor()
-//        btnSave.titleLabel?.font = UIFont.systemFontOfSize(13)
-//        btnSave.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-//        btnSave.clipsToBounds = true
-//        btnSave.layer.cornerRadius = 10
-//        footerView.addSubview(btnSave)
-//        
-//        var btnPost = UIButton(frame: CGRectMake(230 , 30, 70, 30))
-//        btnPost.setTitle("Post", forState: .Normal)
-//        btnPost.backgroundColor = UIColor.blueColor()
-//        btnPost.titleLabel?.font = UIFont.systemFontOfSize(13)
-//        btnPost.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-//        btnPost.clipsToBounds = true
-//        btnPost.layer.cornerRadius = 10
-//        footerView.addSubview(btnPost)
-//        
-//        self.tableView.tableFooterView = footerView
-//    }
+    func addFooter(){
+        var footerView = UIView(frame: CGRectMake(0, 0, tableView.frame.size.width, 50))
+        var bttAdd = UIButton(frame: CGRectMake(10, 10, (tableView.frame.size.width - 50)/3, 30))
+        bttAdd.setTitle("Add Place", forState: .Normal)
+        bttAdd.titleLabel!.font = UIFont(name: "Times New Roman", size: 14)
+        bttAdd.backgroundColor = UIColor.blueColor()
+        bttAdd.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        bttAdd.clipsToBounds = true
+        bttAdd.layer.cornerRadius = 10
+        bttAdd.addTarget(self, action: "buttonAddPlace:", forControlEvents: UIControlEvents.TouchUpInside)
+        footerView.addSubview(bttAdd)
+        
+        var bttSave = UIButton(frame: CGRectMake(CGRectGetMaxX(bttAdd.frame) + 15, 10, (tableView.frame.size.width - 50)/3, 30))
+        bttSave.setTitle("Save", forState: .Normal)
+        bttSave.titleLabel!.font = UIFont(name: "Times New Roman", size: 14)
+        bttSave.backgroundColor = UIColor.blueColor()
+        bttSave.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        bttSave.clipsToBounds = true
+        bttSave.layer.cornerRadius = 10
+        bttSave.addTarget(self, action: "buttonSave:", forControlEvents: UIControlEvents.TouchUpInside)
+        footerView.addSubview(bttSave)
+        
+        var bttPost = UIButton(frame: CGRectMake(CGRectGetMaxX(bttSave.frame) + 15, 10, (tableView.frame.size.width - 50)/3, 30))
+        bttPost.setTitle("Post", forState: .Normal)
+        bttPost.titleLabel!.font = UIFont(name: "Times New Roman", size: 14)
+        bttPost.backgroundColor = UIColor.blueColor()
+        bttPost.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        bttPost.clipsToBounds = true
+        bttPost.layer.cornerRadius = 10
+        bttPost.addTarget(self, action: "buttonPost:", forControlEvents: UIControlEvents.TouchUpInside)
+        footerView.addSubview(bttPost)
+        
+        self.tableView.tableFooterView = footerView
+    }
     
+    func buttonSave(sender:UIButton!){
+        println("Saved")
+    }
+    
+    func buttonPost(sender:UIButton!){
+        println("Posted")
+    }
+    
+    func buttonAddPlace(sender:UIButton!){
+        println("AddPlace")
+    }
+    
+    func textFieldDidBeginEditing(textField: UITextField) {
+        if((textField.tag == 2) || (textField.tag == 3)){
+            textField.resignFirstResponder()
+            let pickerView = UIDatePicker(frame: CGRectMake(0, 200, UIScreen.mainScreen().bounds.width, 200))
+            pickerView.datePickerMode = UIDatePickerMode.Date
+            pickerView.hidden = false
+            pickerView.backgroundColor = UIColor.grayColor()
+            pickerView.date = NSDate()
+            pickerView.addTarget(self, action: "datePickerDidChangeDate:", forControlEvents: UIControlEvents.ValueChanged)
+            self.view.addSubview(pickerView)
+            textField.inputView = pickerView
+            
+        }
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 
     /*
     // MARK: - Navigation

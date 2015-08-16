@@ -7,10 +7,14 @@
 //
 
 import UIKit
+@objc protocol CommentDiadiemViewDelegate{
+    optional func showComment()
+}
 
 class DiaDiemDetailCell: UITableViewCell {
 
     @IBOutlet weak var lblReview: UILabel!
+    var delegateDiadiem: CommentDiadiemViewDelegate?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,6 +27,9 @@ class DiaDiemDetailCell: UITableViewCell {
     }
     
     @IBAction func comment(sender: AnyObject) {
+        if let delegate  = self.delegateDiadiem {
+            delegate.showComment!()
+        }
     }
     @IBAction func like(sender: AnyObject) {
     }

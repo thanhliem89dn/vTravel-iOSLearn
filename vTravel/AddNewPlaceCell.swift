@@ -11,10 +11,21 @@ import UIKit
 class AddNewPlaceCell: UITableViewCell {
 
     @IBOutlet weak var txtPlaceName: UITextField!
-    @IBOutlet weak var time: UIDatePicker!
+    @IBOutlet weak var txtTime: UITextField!
+    @IBOutlet weak var txtDetailPlace: UITextField!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        var tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        self.contentView.addGestureRecognizer(tap)
         // Initialization code
+    }
+    
+    
+    func dismissKeyboard(){
+        self.txtPlaceName.resignFirstResponder()
+        self.txtTime.resignFirstResponder()
+        self.txtDetailPlace.resignFirstResponder()
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

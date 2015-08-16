@@ -17,33 +17,44 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="yhZ-e1-nsL"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                     </textField>
-                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="S51-qg-qRJ">
-                        <rect key="frame" x="8" y="48" width="304" height="162"/>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Review's Place" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oJA-ox-DJp">
+                        <rect key="frame" x="8" y="84" width="304" height="120"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="165" id="BNC-cz-W8C"/>
+                            <constraint firstAttribute="height" constant="120" id="0Ot-7n-RHa"/>
                         </constraints>
-                        <date key="date" timeIntervalSinceReferenceDate="460194673.29950398">
-                            <!--2015-08-02 07:51:13 +0000-->
-                        </date>
-                    </datePicker>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                    </textField>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Time" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QR9-ow-I3f">
+                        <rect key="frame" x="8" y="46" width="304" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="qbd-it-FiT"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                    </textField>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="S51-qg-qRJ" secondAttribute="bottom" constant="8" id="2XO-Cg-g0C"/>
-                    <constraint firstAttribute="trailing" secondItem="S51-qg-qRJ" secondAttribute="trailing" constant="8" id="Ruh-Nr-sbX"/>
+                    <constraint firstItem="oJA-ox-DJp" firstAttribute="leading" secondItem="pUH-mB-wU4" secondAttribute="leading" constant="8" id="7Xp-X0-J42"/>
+                    <constraint firstAttribute="trailing" secondItem="QR9-ow-I3f" secondAttribute="trailing" constant="8" id="D0b-db-gKg"/>
+                    <constraint firstItem="QR9-ow-I3f" firstAttribute="leading" secondItem="pUH-mB-wU4" secondAttribute="leading" constant="8" id="EsV-j7-bnJ"/>
+                    <constraint firstItem="oJA-ox-DJp" firstAttribute="top" secondItem="QR9-ow-I3f" secondAttribute="bottom" constant="8" id="Ok2-5D-WdP"/>
+                    <constraint firstAttribute="trailing" secondItem="oJA-ox-DJp" secondAttribute="trailing" constant="8" id="XS2-UG-q4l"/>
                     <constraint firstAttribute="trailing" secondItem="uJr-tf-owc" secondAttribute="trailing" constant="8" id="dtj-XV-fS0"/>
+                    <constraint firstItem="QR9-ow-I3f" firstAttribute="top" secondItem="uJr-tf-owc" secondAttribute="bottom" constant="8" id="gLt-UR-yyQ"/>
                     <constraint firstItem="uJr-tf-owc" firstAttribute="top" secondItem="pUH-mB-wU4" secondAttribute="top" constant="8" id="hSs-Np-Gjk"/>
-                    <constraint firstItem="S51-qg-qRJ" firstAttribute="leading" secondItem="pUH-mB-wU4" secondAttribute="leading" constant="8" id="mt6-T3-jkw"/>
                     <constraint firstItem="uJr-tf-owc" firstAttribute="leading" secondItem="pUH-mB-wU4" secondAttribute="leading" constant="8" id="qHs-TG-DH5"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="time" destination="S51-qg-qRJ" id="kZ4-a5-ZX5"/>
+                <outlet property="txtDetailPlace" destination="oJA-ox-DJp" id="6wy-5k-rg0"/>
                 <outlet property="txtPlaceName" destination="uJr-tf-owc" id="umO-j8-2Z3"/>
+                <outlet property="txtTime" destination="QR9-ow-I3f" id="l3F-tr-Iuo"/>
             </connections>
-            <point key="canvasLocation" x="578" y="352"/>
+            <point key="canvasLocation" x="938" y="382"/>
         </tableViewCell>
     </objects>
 </document>
