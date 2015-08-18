@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GZR-Ai-84Q">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GZR-Ai-84Q" customClass="FBSDKLoginButton">
                                 <rect key="frame" x="95" y="269" width="130" height="30"/>
                                 <color key="backgroundColor" red="0.30980392159999998" green="0.83529411760000005" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -27,9 +27,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="NTY-4b-Yab" kind="push" id="vI8-x1-KPE"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -39,6 +36,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gxd-Xo-pNC"/>
+                    <connections>
+                        <outlet property="bttLogin" destination="GZR-Ai-84Q" id="XVy-ol-IFS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
@@ -56,20 +56,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3XM-kB-Xbn">
-                                <rect key="frame" x="0.0" y="64" width="160" height="50"/>
-                                <color key="backgroundColor" red="0.90629961169999995" green="1" blue="0.92952181280000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="bxm-Eu-OcS"/>
-                                </constraints>
-                                <state key="normal" title="Tạo hành trình mới">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="themHanhTrinh:" destination="NTY-4b-Yab" eventType="touchUpInside" id="0it-I3-62X"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xxZ-PX-qtc">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xxZ-PX-qtc">
                                 <rect key="frame" x="160" y="64" width="160" height="50"/>
                                 <color key="backgroundColor" red="1" green="0.96588372509999998" blue="0.84741712229999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -82,10 +69,23 @@
                                     <action selector="themDiaDiem:" destination="NTY-4b-Yab" eventType="touchUpInside" id="CDJ-Cz-sa5"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B7f-Jw-bWz">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B7f-Jw-bWz">
                                 <rect key="frame" x="10" y="114" width="300" height="454"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3XM-kB-Xbn">
+                                <rect key="frame" x="0.0" y="64" width="160" height="50"/>
+                                <color key="backgroundColor" red="0.90629961169999995" green="1" blue="0.92952181280000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="bxm-Eu-OcS"/>
+                                </constraints>
+                                <state key="normal" title="Tạo hành trình mới">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="themHanhTrinh:" destination="NTY-4b-Yab" eventType="touchUpInside" id="0it-I3-62X"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
