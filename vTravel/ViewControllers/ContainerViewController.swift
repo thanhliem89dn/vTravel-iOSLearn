@@ -15,10 +15,6 @@ class ContainerViewController: UIViewController,ContainerViewDelegate {
     var currentViewController : UIViewController!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        self.navigationItem.setHidesBackButton(true, animated:true);
-        self.navigationController?.navigationBar.hidden = false
         var vc = self.viewControllerForSegmentIndex(self.segmentControl.selectedSegmentIndex)
         self.addChildViewController(vc)
         vc.view.frame = self.containerView.bounds
@@ -29,6 +25,18 @@ class ContainerViewController: UIViewController,ContainerViewDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        let backBtn = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Plain, target: navigationController, action: nil)
+        self.navigationItem.leftBarButtonItem = backBtn;
+//        self.navigationItem.setHidesBackButton(true, animated:false);
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationItem.setHidesBackButton(false, animated:false);
     }
     
     @IBAction func segmentChanged(sender: AnyObject) {
@@ -65,9 +73,10 @@ class ContainerViewController: UIViewController,ContainerViewDelegate {
     }
     
     @IBAction func themHanhTrinh(sender: AnyObject) {
-        var vc: UIViewController
-        vc = self.storyboard?.instantiateViewControllerWithIdentifier("AddNewTrip") as! UIViewController
-        self.navigationController?.pushViewController(vc, animated: true)
+        self.performSegueWithIdentifier("goToAddNewTrip", sender: nil)
+//        var vc: UIViewController
+//        vc = self.storyboard?.instantiateViewControllerWithIdentifier("AddNewTrip") as! UIViewController
+//        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     

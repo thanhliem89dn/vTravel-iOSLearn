@@ -24,4 +24,34 @@ class vTravelUser: NSObject {
         userName = dictionary["name"] as? NSString
         avatarURL = dictionary["avatar"] as? NSString
     }
+    
+    func convertToParserObject() -> PFObject {
+        var travelUser = PFObject(className:"vTravelUser")
+        travelUser["userID"] = self.userID
+        travelUser["userName"] = self.userName
+        travelUser["avatarURL"] = self.avatarURL
+        //them thuoc tinh
+        return travelUser
+    }
+    
+    func saveToParser(){
+        var parserObject = self.convertToParserObject()
+        parserObject.saveInBackground()
+    }
+    
+
+    
+    //        var gameScore = PFObject(className:"GameScore")
+    //        gameScore["score"] = 1337
+    //        gameScore["playerName"] = "Sean Plott"
+    //        gameScore["cheatMode"] = false
+    //        gameScore.saveInBackgroundWithBlock {
+    //            (success: Bool, error: NSError?) -> Void in
+    //            if (success) {
+    //                // The object has been saved.
+    //            } else {
+    //                // There was a problem, check error.description
+    //            }
+    //        }
+
 }

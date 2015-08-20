@@ -15,6 +15,9 @@ class UserViewController: UIViewController,UITableViewDataSource,UITableViewDele
 
     @IBOutlet weak var tableView: UITableView!
     
+  
+    @IBOutlet var avatar: UIImageView!
+       @IBOutlet var lblName: UILabel!
     @IBOutlet weak var segment: UISegmentedControl!
     var isSwitch  = false
     let hanhtrinhCell = "HanhTrinhUserCell"

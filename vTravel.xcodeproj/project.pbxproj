@@ -34,6 +34,7 @@
 		44BDD5B61B6783BB00CCB042 /* HanhTrinhUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44BDD5B41B6783BB00CCB042 /* HanhTrinhUserCell.xib */; };
 		44BDD5B91B678CB000CCB042 /* DiadiemUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BDD5B71B678CB000CCB042 /* DiadiemUserCell.swift */; };
 		44BDD5BA1B678CB000CCB042 /* DiadiemUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44BDD5B81B678CB000CCB042 /* DiadiemUserCell.xib */; };
+		899BF7121B84BA4500CC0AFE /* ParserAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899BF7111B84BA4500CC0AFE /* ParserAdapter.swift */; };
 		899D17621B82C86F00484E12 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 899D17611B82C86F00484E12 /* Bolts.framework */; };
 		899D17721B82CC6F00484E12 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 899D176D1B82CC6E00484E12 /* Bolts.framework */; };
 		899D17731B82CC6F00484E12 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 899D176E1B82CC6E00484E12 /* Parse.framework */; };
@@ -117,6 +118,7 @@
 		44BDD5B41B6783BB00CCB042 /* HanhTrinhUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HanhTrinhUserCell.xib; sourceTree = "<group>"; };
 		44BDD5B71B678CB000CCB042 /* DiadiemUserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiadiemUserCell.swift; sourceTree = "<group>"; };
 		44BDD5B81B678CB000CCB042 /* DiadiemUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiadiemUserCell.xib; sourceTree = "<group>"; };
+		899BF7111B84BA4500CC0AFE /* ParserAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserAdapter.swift; sourceTree = "<group>"; };
 		899D17611B82C86F00484E12 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = ../../../Documents/FacebookSDK/Bolts.framework; sourceTree = "<group>"; };
 		899D176D1B82CC6E00484E12 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../Downloads/parse-library-1.7.5/Bolts.framework"; sourceTree = "<group>"; };
 		899D176E1B82CC6E00484E12 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../Downloads/parse-library-1.7.5/Parse.framework"; sourceTree = "<group>"; };
@@ -253,6 +255,14 @@
 			name = Image;
 			sourceTree = "<group>";
 		};
+		899BF7101B84BA2300CC0AFE /* ParserController */ = {
+			isa = PBXGroup;
+			children = (
+				899BF7111B84BA4500CC0AFE /* ParserAdapter.swift */,
+			);
+			name = ParserController;
+			sourceTree = "<group>";
+		};
 		89A5E2D41B8185F5004B9180 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -289,6 +299,7 @@
 		89E471771B59278F00F9DA27 /* vTravel */ = {
 			isa = PBXGroup;
 			children = (
+				899BF7101B84BA2300CC0AFE /* ParserController */,
 				89A5E2D41B8185F5004B9180 /* Model */,
 				44BDD5A11B67635E00CCB042 /* Cell */,
 				89E471BC1B592D8E00F9DA27 /* FrameWorks */,
@@ -520,6 +531,7 @@
 				44BDD5B51B6783BB00CCB042 /* HanhTrinhUserCell.swift in Sources */,
 				B094C10B1B6DAEB300454722 /* AddNewTripCell.swift in Sources */,
 				B06814461B7C7357003DA9C1 /* ReviewTextCell.swift in Sources */,
+				899BF7121B84BA4500CC0AFE /* ParserAdapter.swift in Sources */,
 				44912C321B68BCBA00E19B88 /* ImageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

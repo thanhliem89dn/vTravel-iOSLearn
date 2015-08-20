@@ -20,8 +20,8 @@ class LoginVC: UIViewController,FBSDKLoginButtonDelegate {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        self.navigationItem.setHidesBackButton(true, animated:true);
-        self.navigationController?.navigationBar.hidden = true
+//        self.navigationItem.setHidesBackButton(true, animated:true);
+//        self.navigationController?.navigationBar.hidden = true
         if ((FBSDKAccessToken.currentAccessToken()) != nil) {
             isLogin = true;
             NSLog("facebook already connected");

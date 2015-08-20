@@ -31,6 +31,12 @@ class HanhTrinhDetailViewController: UIViewController,UITableViewDelegate,UITabl
         tableView.showsVerticalScrollIndicator = false
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationItem.setHidesBackButton(false, animated:false);
+    }
+
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
