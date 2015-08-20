@@ -34,6 +34,24 @@ class UserViewController: UIViewController,UITableViewDataSource,UITableViewDele
         tableView.registerNib(cellNib2, forCellReuseIdentifier: diadiemCell)
         self.navigationItem.setHidesBackButton(true, animated:true);
         tableView.showsVerticalScrollIndicator = false
+        
+//        self.navigationItem.setHidesBackButton(true, animated:true);
+//        tableView.showsVerticalScrollIndicator = false
+//        
+        self.avatar.clipsToBounds = true
+        self.avatar.layer.cornerRadius = 5
+        
+        let userDefault = NSUserDefaults.standardUserDefaults()
+        if let name = userDefault.stringForKey("name"){
+            self.lblName.text = name
+        }
+        
+        self.avatar.contentMode = UIViewContentMode.ScaleToFill
+        if let data: AnyObject = userDefault.objectForKey("avatar"){
+            self.avatar.image = UIImage(data: data as! NSData)
+        }
+        
+
     }
 
     override func didReceiveMemoryWarning() {
